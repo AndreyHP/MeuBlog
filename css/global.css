@@ -1,0 +1,62 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css");
+
+/*Definições de estilos*/
+
+:root{
+    --font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+
+/*Reset*/
+
+*{
+    box-sizing: border-box;
+    outline: none;
+}
+
+
+html, body, #wrap{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-family);
+    font-size: 16px;
+}
+
+#wrap{
+    display: flex;
+    flex-direction: column;
+}
+
+.search-button{
+    border-radius: 10px;
+}
+
+main{
+    flex-grow: 1;
+}
+
+.menu-link{
+    padding-right: 50px;
+}
+
+body{
+    background-color: indianred;
+}
+
+.header-class{
+    align-items: center;
+    display: flex;
+}
+
+.logo{
+    max-width: 40%;
+    height: auto;
+    margin-right: 10px;
+}
+
+h1{
+    font-size-adjust: 0.4;
+}
