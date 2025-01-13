@@ -1,4 +1,3 @@
-// Your JavaScript code here
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js";
 import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js";
@@ -12,7 +11,7 @@ import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.c
 
 const firebaseConfig = {
 
-  apiKey: "AIzaSyAyqQ0OK7ucs9m0o2ggDGoWE7LJEfHgoz8",
+  apiKey: "",
 
   authDomain: "meublog-ee114.firebaseapp.com",
 
