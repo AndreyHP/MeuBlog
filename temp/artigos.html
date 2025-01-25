@@ -1,0 +1,82 @@
+<pre>
+    <h2>Criando artigos "fake" no Firebase Firestore</h2>Lembre-se de verificar e alterar as chaves de configuração do Firebase em <code>fbconfig.js</code>!!!
+    
+        <em>CUIDADO! Esta ação apaga todos os "artigos" preexistentes!</em>
+    
+    <button id="iniciar">Apagar artigos atuais e salvar os novos</button> ← Clique somente uma vez!!!
+</pre>
+
+<script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore-compat.js"></script>
+
+<script>
+    /**
+     * Configuração do Firebase
+     **/
+    const firebaseConfig = {
+        apiKey: "AIzaSyAyqQ0OK7ucs9m0o2ggDGoWE7LJEfHgoz8",
+        authDomain: "meublog-ee114.firebaseapp.com",
+        projectId: "meublog-ee114",
+        storageBucket: "meublog-ee114.firebasestorage.app",
+        messagingSenderId: "179221168100",
+        appId: "1:179221168100:web:7ab056c75727d0efaf11f1"
+
+    };
+</script>
+<script>
+    /**
+     * Inicialização do Firebase e dos aplicativos Firestore e Authentication.
+     * Não altere nada aqui.
+     **/
+    const firebaseApp = firebase.initializeApp(firebaseConfig);
+    const db = firebaseApp.firestore();
+</script>
+
+<script>
+
+    let artigos = [];
+
+    async function carregarArtigos(arquivoJSON) {
+        try {
+            const resposta = await fetch(arquivoJSON);
+            if (!resposta.ok) {
+                throw new Error('Erro ao carregar o arquivo JSON');
+            }
+            artigos = await resposta.json();
+        } catch (erro) {
+            console.error('Erro:', erro);
+        }
+    }
+
+    async function salvaArtigos() {
+        if (artigos.length > 0) {
+            try {
+                const querySnapshot = await db.collection("artigos").get();
+                document.write('<pre>Apagando artigos existentes...</pre>');
+                querySnapshot.forEach((doc) => {
+                    doc.ref.delete();
+                });
+                for (const artigo of artigos) {
+                    try {
+                        const docRef = await db.collection("artigos").add(artigo);
+                        document.write(`<pre>&bull; "${artigo.titulo}" criado com o ID "${docRef.id}".</pre>`);
+                    } catch (error) {
+                        document.write(`<pre>Erro ao criar "${artigo.titulo}": ${error}</pre>`);
+                    }
+                }
+            } catch (error) {
+                document.write(`<pre>Erro ao apagar artigos existentes: ${error}</pre>`);
+            }
+        } else {
+            document.write('<pre><h3>ERRO! Nenhum artigo carregado.</pre>');
+        }
+    }
+
+    var iniciar = document.getElementById('iniciar');
+    iniciar.addEventListener('click', async () => {
+        await carregarArtigos('artigos.json');
+        await salvaArtigos();
+        document.write('<pre><h3>Feche essa página ao concluir</h3></pre>');
+    });
+
+</script>

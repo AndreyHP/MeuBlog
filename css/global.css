@@ -69,7 +69,7 @@ body{
 
     margin: 0;
     background-color: #ffffff;
-    background-image: url(/img/Serial-E.jpg);
+    background-image: url(/img/wpp01.gif);
     background-repeat:no-repeat;
     background-size: cover;
     background-position: center;
@@ -85,7 +85,7 @@ body{
 
 header img{
     height: auto;
-    max-width: 80%;
+    max-width: 30%;
     
 }
 
@@ -97,7 +97,7 @@ form input, form button{
 
 header form{
     padding: 0.9rem;
-    background-color: burlywood;
+    background-color: #777b7c;
 }
 
 header h1{
@@ -106,7 +106,11 @@ header h1{
 }
 
 header{
-    background-color: bisque;
+    background-color: #414348;
+    background-image: url(/img/img01.gif);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position:right;
 }
 
 nav{
