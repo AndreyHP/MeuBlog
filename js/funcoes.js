@@ -73,7 +73,7 @@ function dataJStoISO(dataJS) {
 function template(){
 
 
-    return `
+    return /*html*/`
     
     
     <header>
@@ -94,15 +94,15 @@ function template(){
 
         <nav>
             <a href="" class="menu-link" title="inicio">
-                <i class="fa-solid fa-house"></i> Inicio
+                <img class="nav-img" src="./img/home.png" alt="home">
             </a>
             <a href="" class="menu-link" title="sobre">
-                <i class="fa-solid fa-user"></i> User  
+             <img class="nav-img" src="./img/user.png" alt="user">  
             </a>
         </nav>
 
         <main>
-            <div id="#artigos"><div/>
+            <div id="conteudo"></div>
         </main>
 
         <footer>
@@ -113,14 +113,7 @@ function template(){
             <a href="#wrap" title="ir para o começo da pagina">
                 <i class="fa-solid fa-arrow-up"></i>
             </a>
-        </footer>
-    
-    
-    
-    
-    
-    
-    
+        </footer> 
     `;
 
 };
