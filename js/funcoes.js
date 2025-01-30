@@ -70,6 +70,14 @@ function dataJStoISO(dataJS) {
 }
 
 
+/**
+ * Login no firebase Authentication
+ */
+function fbSigIn(){
+    firebase.auth().signInWithPopup(provider);
+}
+
+
 function template(){
 
 
@@ -81,7 +89,7 @@ function template(){
                 <a href="/">
                     <img class="logo"  src=${site.logo} alt="${site.titulo}">
                 </a>  
-                <h1>Meu Blog statico</h1> 
+                <h1>${site.titulo}</h1> 
             </div>
             <form action="https://www.google.com/search?" method="get">
                 <input type="search" name="q" placeholder="Buscar..">
@@ -96,7 +104,7 @@ function template(){
             <a href="" class="menu-link" title="inicio">
                 <img class="nav-img" src="./img/home.png" alt="home">
             </a>
-            <a href="" class="menu-link" title="sobre">
+            <a href="" id="usuarioAcao" data-acao="login" class="menu-link" title="user">
              <img class="nav-img" src="./img/user.png" alt="user">  
             </a>
         </nav>

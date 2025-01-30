@@ -3,7 +3,7 @@
 
  const site = {
 
-    titulo: "Meu Blog Statico",
+    titulo: "サイバー",
     logo:   "./img/logo.gif",
     proprietario: "Andrey Marins",
     ano:  2025,

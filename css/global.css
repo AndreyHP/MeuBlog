@@ -45,6 +45,8 @@ html, body, #wrap{
     height: 100%;
     max-width: 1024px;
     margin: auto;
+
+
 }
 
 .search-button{
@@ -61,7 +63,7 @@ main{
 
 
 article{
-    color: rgb(102, 95, 85);
+    color: rgb(85, 102, 90);
 }
 
 
@@ -86,7 +88,7 @@ body{
 
 header img{
     height: auto;
-    max-width: 30%;
+    width: 5rem;
     
 }
 
@@ -98,17 +100,23 @@ form input, form button{
 
 header form{
     padding: 0.9rem;
-    background-color: #777b7c;
+    background-color: rgb(124, 107, 226);
 }
 
 header h1{
     font-size-adjust: 0.3;
     font-size: 2.5rem;
     color: aliceblue;
+    text-align: left;
+}
+
+header a{
+    width: 1rem;
+    padding-right: 5.5rem;
 }
 
 header{
-    background-color: #414348;
+    background-color: #fdfdfd;
     background-image: url(/img/img01.gif);
     background-repeat:no-repeat;
     background-size: cover;
@@ -148,7 +156,7 @@ nav span{
 
 footer{
 
-    background-color: gainsboro;
+    background-color: rgb(124, 107, 226);
     display: flex;
     justify-content: space-between;
 
