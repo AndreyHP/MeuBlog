@@ -77,6 +77,9 @@ function fbSigIn(){
     firebase.auth().signInWithPopup(provider);
 }
 
+function fbSignOut(){
+    firebase.auth().signOut();
+}
 
 function template(){
 
@@ -105,7 +108,7 @@ function template(){
                 <img class="nav-img" src="./img/home.png" alt="home">
             </a>
             <a href="" id="usuarioAcao" data-acao="login" class="menu-link" title="user">
-             <img class="nav-img" src="./img/user.png" alt="user">  
+             <img class="nav-img" src="./img/user.png" alt="user"  referrerpolicy="no-referrer">  
             </a>
         </nav>
 

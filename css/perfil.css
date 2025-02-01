@@ -1,0 +1,46 @@
+h2{
+    color: rgb(255, 255, 255);
+}
+
+li{
+    color: rgb(255, 255, 255);
+}
+
+#perfilID{
+    background-color: rgb(60, 45, 78);
+}
+
+p{
+    color: white;
+}
+
+.fotoPerfil{
+    display: block;
+    margin: auto;
+    width: 100%;
+    max-width: 8rem;
+}
+
+.ulDados {
+    display: table;
+    margin: 2rem auto;
+    padding-left: 1rem;
+    line-height: 1.5;
+}
+
+.btnPerfil,
+.btnLogout {
+    font-family: inherit;
+    font-size: inherit;
+    display: block;
+    margin: auto;
+    width: 200px;
+    padding: .5rem 1rem;
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.p-center{
+    text-align: center;
+}
