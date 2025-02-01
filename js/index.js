@@ -11,7 +11,7 @@ db.collection("artigos")
          Formata HTML de saida na var out.
         */
         out = /*html*/`
-            <h2>Artigos Recentes</h2>
+            <h2 id="h2-artigos">Artigos Recentes</h2>
             <div class="lista-artigos">
         `;
 
