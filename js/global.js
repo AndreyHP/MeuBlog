@@ -16,11 +16,11 @@ window.onload = () => {
 
             if (site.verPerfil) {
                 _('#usuarioAcao').title = 'Ver seu perfil';
-                _('#usuarioAcao').href = 'perfil.html';
+                _('#usuarioAcao').href = './perfil.html';
                 _('#usuarioAcao').setAttribute('data-acao', 'perfil');
             }else {
                 _('#usuarioAcao').title = 'Faça logout';
-                _('#usuarioAcao').href = 'perfil.html';
+                _('#usuarioAcao').href = './perfil.html';
                 _('#usuarioAcao').setAttribute('data-acao', 'logout');
             }
 
@@ -30,10 +30,10 @@ window.onload = () => {
             // console.log('não logado')
 
             // Se está logado
-            _('#usuarioAcao img').src = 'img/user.png'; // Mostra a imagem
+            _('#usuarioAcao img').src = './img/user.png'; // Mostra a imagem
             _('#usuarioAcao img').alt = 'Faça login'; // Troca o alt da imagem
             _('#usuarioAcao').title = 'Faça login'; // Troca o title
-            _('#usuarioAcao').href = 'login.html'; // Troca o link ao clicar (inútil)
+            _('#usuarioAcao').href = './login.html'; // Troca o link ao clicar (inútil)
             _('#usuarioAcao').setAttribute('data-acao', 'login'); // Troca o valor de `data-acao`
         }
       });
@@ -62,7 +62,7 @@ window.onload = () => {
                 fbSignOut();
                 break;
             case 'perfil':
-                location.href = 'perfil.html';
+                location.href = './perfil.html';
         };  
 
     });
