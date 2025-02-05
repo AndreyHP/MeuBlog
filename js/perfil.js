@@ -38,7 +38,7 @@ firebase.auth().onAuthStateChanged((user) => {
 
         _('#conteudo').innerHTML = out;
     } else {
-        location.href = 'index.html';
+        location.href = './index.html';
     }
 });
 
