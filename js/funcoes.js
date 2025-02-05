@@ -89,7 +89,7 @@ function template(){
     
     <header>
             <div class="header-class">
-                <a href="/">
+                <a href="./">
                     <img class="logo"  src=${site.logo} alt="${site.titulo}">
                 </a>  
                 <h1>${site.titulo}</h1> 
@@ -104,7 +104,7 @@ function template(){
         </header>
 
         <nav>
-            <a href="" class="menu-link" title="inicio">
+            <a href="./" class="menu-link" title="inicio">
                 <img class="nav-img" src="./img/home.png" alt="home">
             </a>
             <a href="" id="usuarioAcao" data-acao="login" class="menu-link" title="user">
