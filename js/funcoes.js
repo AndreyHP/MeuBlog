@@ -104,7 +104,7 @@ function template(){
         </header>
 
         <nav>
-            <a href="./" class="menu-link" title="inicio">
+            <a href="./index.html" class="menu-link" title="inicio">
                 <img class="nav-img" src="./img/home.png" alt="home">
             </a>
             <a href="" id="usuarioAcao" data-acao="login" class="menu-link" title="user">
