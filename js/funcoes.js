@@ -89,7 +89,7 @@ function template(){
     
     <header>
             <div class="header-class">
-                <a href="./">
+                <a href="./index.html">
                     <img class="logo"  src=${site.logo} alt="${site.titulo}">
                 </a>  
                 <h1>${site.titulo}</h1> 
